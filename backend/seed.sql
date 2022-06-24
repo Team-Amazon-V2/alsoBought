@@ -1,0 +1,1 @@
+INSERT INTO faq (question_title, question_date, question_user, answer_text) VALUES ('First Post', 'July 4th, 2022', 'Sid', 'This is my first post!');
