@@ -5,6 +5,8 @@
 
 .ReactModal__Overlay--after-open{
     opacity: 1;
+    width: 460px;
+    height: fit-content;
 }
 
 .ReactModal__Overlay--before-close{
@@ -153,4 +155,9 @@ background-color: #ffd814;
 
 .userNameForm{
     margin-left: 25px;
+}
+
+.faq-container {
+    width: 800px;
+    max-height: fit-content;
 }

@@ -91,11 +91,12 @@ app.post ("/question/post", async (req, res) => {
 //post an answer
     app.patch ("/answer/:id", async (req, res) => {
         let answer_text = req.body.answer_text;
+        let answer_text_value= answer_text.replace(/'/g, '');
         let question_id= req.params.id;
 
             try {
                 let client = await pool.connect();
-                const data = await client.query(`UPDATE qanda SET answer_text='${answer_text}' WHERE question_id = '${question_id}';`);
+                const data = await client.query(`UPDATE qanda SET answer_text='${answer_text_value}' WHERE question_id = '${question_id}';`);
                 res.json("POSTED!");
                 client.release();
             }
