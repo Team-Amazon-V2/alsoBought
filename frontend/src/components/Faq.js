@@ -63,7 +63,7 @@ const handleModalSubmit = (e) => {
    style={{
     overlay: {
       position: 'absolute',
-      top: '40%',
+      top: '30%',
       left: '25%',
       right: 0,
       bottom: 0,
@@ -76,7 +76,7 @@ const handleModalSubmit = (e) => {
     <h3 className="ModalTitle">Post your question</h3>
     </div>
     <form className="userNameForm">
-  <input type="text" id="fname" name="fname" placeholder="Your name:"></input>
+  <input type="text" id="fname" name="fname" placeholder="Please enter a name"></input>
 </form>
 <br></br>
     <textarea maxLength="1000" placeholder="Please enter a question." id='questionTextInput' className="questionTextArea"></textarea>
