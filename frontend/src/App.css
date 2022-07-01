@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ReactModal__Overlay--after-open{
+    opacity: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ReactModal__Overlay--before-close{
+    opacity: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ModalTitle {
+    margin-left: 25px;
+    font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.ModalContentContainer {
+    display: block;
+    width:460px;
+    height: fit-content;
+    border-radius: 8px;
+    border: 1px solid;
+    box-shadow: 0 0 14px 0 rgb(15 17 17 / 50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ModalTitleContainer{
+    display: flex;
+    background-color: #F0F2F2;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.qTipContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    font-weight:500;
+    font-size: 14px;
+}
+
+.Modal-CancelButton {
+    margin-left: 65%;
+    border: 1px solid;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    margin-right: 5px;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 2px 0 rgb(15 17 17 / 50%);
+}
+
+.Modal-SubmitButton {
+    border: 1px solid;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    margin-right: 10px;
+    background-color: #ffd814;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 2px 0 rgb(15 17 17 / 50%);
+}
+
+.questionTextArea {
+    min-width: 400px;
+    max-width:400px;
+    min-height:100px;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.DontSeeContainer{
+    display: flex;
+    align-items: center;
+    background-color: #F0F2F2!important;
+    height:60px;
+    width: 800px;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.DontSeeText {
+   margin-left: 30px;
+   margin-right: 20px;
+}
+
+.qPost-Button {
+    background-color: white;
+    border-radius: 8px;
+    height: 30px;
+    border-width: 0.5px;
+    border-style: hidden;
+    box-shadow: 0 0 6px 0 rgb(15 17 17 / 50%);
+}
+
+.faq-header {
+    margin-left: 20px;
+}
+
+.question {
+    margin-left: 20px;
+}
+
+.answer {
+    margin-left: 20px;
+}
+
+.question-infoText{
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.postAnswer-container{
+    margin-left: 30px;
+    width: 480px;
+    height: 530px;
+    margin-top: 20px;
+}
+
+.question-title {
+    font-size: 24px;
+}
+
+.answerTextArea {
+    min-width: 400px;
+    max-width:400px;
+    min-height: 90px;
+}
+
+.postAnswer-button{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 35px;
+width:180px;
+font-weight: 500;
+border-radius: 10px;
+border-style: hidden;
+background-color: #ffd814;
+}
+
+.ReturnToFAQ{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.userNameForm{
+    margin-left: 25px;
 }

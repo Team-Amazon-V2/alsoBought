@@ -1,7 +1,9 @@
-CREATE TABLE faq (
-    question_id SERIAL PRIMARY KEY NOT NULL,
-    question_title VARCHAR(200),
+CREATE TABLE qanda (
+    question_id VARCHAR,
+    question_title TEXT,
     question_date VARCHAR,
+    answer_text TEXT,
     question_user VARCHAR,
-    answer_text TEXT []
+    asin_id VARCHAR
 );
+

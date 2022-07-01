@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Faq from './components/Faq';
+import Addanswer from './components/Addanswers';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [faqData, setFaqData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [questionData, setquestionData] = useState([]);
+  const [questionLoading, setquestionLoading] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route exact path='/' element={
+          <Faq setFaqData={setFaqData} faqData={faqData} loading={loading} setLoading={setLoading} setquestionData={setquestionData} setquestionLoading={setquestionLoading} modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
+        }>
+        </Route>
+        <Route exact path='/postanswer' element={
+          <>
+          <Addanswer questionData={questionData} questionLoading={questionLoading} />
+          </>
+        }>
+
+        </Route>
+        <Route exact path='/postquestion' element={
+          <h1>test</h1>
+        }>
+        </Route>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
