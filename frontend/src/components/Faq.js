@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal';
 
 
-Modal.setAppElement('#root')
+Modal.setAppElement('#faq-root')
 
 function Faq(props){
     

@@ -1,10 +1,10 @@
-import './App.css';
+import './FaqMain.css';
 import Faq from './components/Faq';
 import Addanswer from './components/Addanswers';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-function App() {
+function FaqMain() {
   const [faqData, setFaqData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [questionData, setquestionData] = useState([]);
@@ -34,4 +34,4 @@ function App() {
   )
 }
 
-export default App;
+export default FaqMain;
